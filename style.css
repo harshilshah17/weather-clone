@@ -1,67 +1,77 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #f0f2f5;
-    margin: 0;
-  }
-  
-  .card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .search {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .search-bar {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
-    outline: none;
-    width: 80%;
-  }
-  
-  button {
-    padding: 10px;
-    background: #007BFF;
-    border: none;
-    border-radius: 0 4px 4px 0;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  button svg {
-    vertical-align: middle;
-  }
-  
-  .weather.loading {
-    opacity: 0.5;
-  }
-  
-  .city {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .temp {
-    font-size: 48px;
-    margin-bottom: 10px;
-  }
-  
-  .humidity, .wind {
-    font-size: 18px;
-    margin-bottom: 5px;
-  }
-  
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f2f5;
+  margin: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  width: 80%;
+}
+
+button {
+  padding: 10px;
+  background: #007BFF;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+button svg {
+  vertical-align: middle;
+}
+
+.weather.loading {
+  opacity: 0.5;
+}
+
+.city {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.icon {
+  width: 100px;
+}
+
+.description {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.temp {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.humidity, .wind {
+  font-size: 18px;
+  margin-bottom: 5px;
+}

@@ -32,8 +32,23 @@ let weather = {
     document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
     document.querySelector(".wind").innerText = "Wind speed: " + speed + " km/hr";
     document.querySelector(".weather").classList.remove("loading");
-    document.body.style.backgroundImage =
-      "url('https://source.unsplash.com/1600x900/?" + name + "')";
+    this.updateBackgroundImage(description);
+  },
+  updateBackgroundImage: function (description) {
+    const weatherConditions = {
+      "clear sky": "url('images/clear.jpg')",
+      "few clouds": "url('images/few-clouds.jpg')",
+      "scattered clouds": "url('images/scattered-clouds.jpg')",
+      "broken clouds": "url('images/broken-clouds.jpg')",
+      "shower rain": "url('images/shower-rain.jpg')",
+      "rain": "url('images/rain.jpg')",
+      "thunderstorm": "url('images/thunderstorm.jpg')",
+      "snow": "url('images/snow.jpg')",
+      "mist": "url('images/mist.jpg')",
+      "overcast clouds": "url('images/overcast-clouds.jpg')"
+    };
+
+    document.body.style.backgroundImage = weatherConditions[description] || "url('images/default.jpg')";
   },
   search: function () {
     this.fetchWeather(document.querySelector(".search-bar").value);
@@ -52,4 +67,4 @@ document
     }
   });
 
-weather.fetchWeather("New York City");
+weather.fetchWeather("Delhi");
